@@ -1,7 +1,7 @@
 # Guide pour la FredoOS
 
 
-Dans ce guide, je vais vous tenir la main pour créer chez vous ma DGFLI à moi, la FredoOS. C’est une base Archlinux avec LXQt, LibreOffice, Mozilla Firefox, VLC, Octopi (pour la gestion graphique des paquets logiciels. Je montre ici comment reproduire l’ensemble dans une machine virtuelle. Si vous voulez l’installer en dur, c’est à vos risques et périls, même si la FredoOS est la copie presque complète de l’installation faisant tourner mon PC portable.
+Dans ce guide, je vais vous tenir la main pour créer chez vous ma DGFLI à moi, la FredoOS. C’est une base Archlinux avec LXQt, LibreOffice, Mozilla Firefox, VLC, Octopi (pour la gestion graphique des paquets logiciels). Je montre ici comment reproduire l’ensemble dans une machine virtuelle. Si vous voulez l’installer en dur, c’est à vos risques et périls, même si la FredoOS est la copie presque complète de l’installation faisant tourner mon PC portable.
 
 
 ## I) Installer la base.
@@ -25,10 +25,10 @@ On arrive devant cet écran quand Archinstall est démarré.
 
 
 
-**Note :** Pour sélectionner une option, c’est la barre d’espace qui est utilisé. Pour avoir une recherche rapide pour les longues listes, c’est la touche / qui est utilisée.
+**Note :** Pour sélectionner une option, c’est la barre d’espace qui est utilisée. Pour avoir une recherche rapide pour les longues listes, c’est la touche / qui est utilisée.
 
 
-On va dans Archinstall Language et on sélectionne french pour avoir l’ensemble traduit. On commence par les locales. Dans Paramètres régionaux, on choisit les valeurs suivantes pour chaque option  :
+On va dans "Archinstall Language" et on sélectionne french pour avoir l’ensemble traduit. On commence par les locales. Dans Paramètres régionaux, on choisit les valeurs suivantes pour chaque option  :
 
 
 - Disposition du clavier : fr
@@ -60,10 +60,10 @@ Ensuite dans la liste, on sélectionne LXQt. Ce qui va nous permettre d’avoir 
 Ensuite, on entre dans la section Application. J’ai choisi d’activer les options les unes après les autres, ce qui permet d’avoir du bluetooth, du son et le support basique des imprimantes, sans oublier un pare-feu basique au passage.
 
 
-Dans additional fonts, on sélectionne toutes les polices, ça permettra d’avoir un jeu de polices déjà bien costaud dès le départ.
+Dans Additional Fonts, on sélectionne toutes les polices, ça permettra d’avoir un jeu de polices déjà bien costaud dès le départ.
 
 
-Dans Configurer le réseau, on choisit l’option « Use Network Manager (default backend) »
+Dans Configurer le réseau, on choisit l’option "Use Network Manager (default backend)"
 
 ![networkmanager](04.png)
 
@@ -91,15 +91,15 @@ Après, on tape exit pour quitter le chroot et reboot pour démarrer sur l’ins
 Une fois redémarré, on arrive sur sddm et on se connecte dans LXQt. On va ouvrir un qterminal pour installer yay qui nous permettra d’installer qt-sudo et octopi sans se prendre la tête.
 
 
-On tape dans le terminal la ligne suivante pour configurer les options de compilation de notre installation : sudo nano /etc/makepkg,conf. On va ensuite dans la section « OPTIONS » et on va mettre un ! Devant les options debug et lto.
+On tape dans le terminal la ligne suivante pour configurer les options de compilation de notre installation : `sudo nano /etc/makepkg.conf`. On va ensuite dans la section "OPTIONS" et on va mettre un ! Devant les options debug et lto.
 
 ![makepkg partie 1](07.png)
 
-Toujours dans ce fichier, on va dans l’option MAKEFLAGS et on saisit le nombre de CPUs utilisé, sans oublier de sortir le \#. On enregistre ensuite le fichier avec le raccourci clavier CTRL+X.
+Toujours dans ce fichier, on va dans l’option MAKEFLAGS et on saisit le nombre de CPUs utilisés, sans oublier de sortir le \# en début de ligne. On enregistre ensuite le fichier avec le raccourci clavier CTRL+X.
 
 ![makepkg partie 2](08.png)
 
-On tape dans le terminal la ligne suivante : `git clone [https://aur.archlinux.org/yay.git](https://aur.archlinux.org/yay.git)`
+On tape dans le terminal la ligne suivante : `git clone` [https://aur.archlinux.org/yay.git](https://aur.archlinux.org/yay.git)
 
 On continue avec un `cd yay`. Puis avec un `makepkg -sri` pour installer yay.
 
@@ -133,7 +133,6 @@ Dans la nouvelle fenêtre, on va sur Lancement automatique / ajouter et on rempl
 
 
 - Nom : octopi-notifier
-
 - Commande : /usr/bin/octopi-notifier
 
 ![applications au démarrage](10.png)
