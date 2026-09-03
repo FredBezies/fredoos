@@ -11,13 +11,12 @@ Le premier paquet logiciel à rajouter, c’est le paquet linux-headers. En effe
 
 
 - linux-headers pour le noyau linux court terme
-
 - linux-lts-headers pour le noyau linux long terme
-
 
 Autre outil que j’avais oublié d’installer dans le guide officiel, c’est un bloc note quand on a besoin de créer rapidement un fichier texte. J’ai donc choisi [Featherpad](https://github.com/tsujan/featherpad) que vous pourrez ajouter à votre installation.
 
+![FeatherPad en action](12.png)
 
 Enfin, pour la retouche d’image et de photo, soit Gimp, soit Krita, ce dernier étant plus adapté aux environnements de bureau basé sur QT, comme LXQt.
 
-
+![Krita en action](13.png)
