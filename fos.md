@@ -103,7 +103,7 @@ On tape dans le terminal la ligne suivante : `git clone` [https://aur.archlinux
 
 On continue avec un `cd yay`. Puis avec un `makepkg -sri` pour installer yay.
 
-Enfin, une fois yay installé, on peut passer à l’installation d’octopi : yay -S qt sudo puis yay -S octopi. Maintenant, on peut lancer Octopi pour installer les paquets manquants.
+Enfin, une fois yay installé, on peut passer à l’installation d’octopi : `yay -S qt-sudo` puis `yay -S octopi`. Maintenant, on peut lancer Octopi pour installer les paquets manquants.
 
 ![octopi](09.png)
 
