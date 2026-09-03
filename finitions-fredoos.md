@@ -12,6 +12,7 @@ Le premier paquet logiciel à rajouter, c’est le paquet linux-headers. En effe
 
 - linux-headers pour le noyau linux court terme
 - linux-lts-headers pour le noyau linux long terme
+- linux-zen-headers pour le noyau linux zen
 
 Autre outil que j’avais oublié d’installer dans le guide officiel, c’est un bloc note quand on a besoin de créer rapidement un fichier texte. J’ai donc choisi [Featherpad](https://github.com/tsujan/featherpad) que vous pourrez ajouter à votre installation.
 
