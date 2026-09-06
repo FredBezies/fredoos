@@ -118,6 +118,8 @@ Maintenant, voici la liste des paquets à installer avec Octopi :
 - 7zip
 - zip
 - unzip
+- less
+- mc
 
 
 Une fois les logiciels installés, il faut se déconnecter et se reconnecter. Ce qui permet d’activer gvfs et d’avoir la corbeille sur le fond d’écran et la gestion des périphériques amovibles fonctionnelle.
