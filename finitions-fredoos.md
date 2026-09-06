@@ -32,7 +32,7 @@ Une fois le thème installé via yay ou octopi, on commence par créer un réper
 
 ```
 sudo mkdir -p /etc/sddm.conf.d
-sudo nano /etc/sddm.conf.d/theme.conf
+sudo nano /etc/sddm.conf.d/sddm.conf
 ``` 
 
 Et on entre les lignes suivantes :
