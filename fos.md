@@ -120,6 +120,7 @@ Maintenant, voici la liste des paquets à installer avec Octopi :
 - unzip
 - less
 - mc
+- gst-plugins-bad (pour compléter les capacités multimédia de l'installation)
 
 
 Une fois les logiciels installés, il faut se déconnecter et se reconnecter. Ce qui permet d’activer gvfs et d’avoir la corbeille sur le fond d’écran et la gestion des périphériques amovibles fonctionnelle.
