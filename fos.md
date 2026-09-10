@@ -21,7 +21,7 @@ archinstall
 On arrive devant cet écran quand Archinstall est démarré.
 
 
-![archinstall](01.png)
+![archinstall](images/01.png)
 
 
 
@@ -49,12 +49,12 @@ Dans le profil, on va sélectionner l’installation à faire. À savoir une ins
 
 On va dans Profil / Type et on sélectionne Desktop.
 
-![type d'installation](02.png)
+![type d'installation](images/02.png)
 
 
 Ensuite dans la liste, on sélectionne LXQt. Ce qui va nous permettre d’avoir une interface graphique dès le premier lancement.
 
-![lxqt](03.png)
+![lxqt](images/03.png)
 
 
 Ensuite, on entre dans la section Application. J’ai choisi d’activer les options les unes après les autres, ce qui permet d’avoir du bluetooth, du son et le support basique des imprimantes, sans oublier un pare-feu basique au passage.
@@ -65,16 +65,17 @@ Dans Additional Fonts, on sélectionne toutes les polices, ça permettra d’avo
 
 Dans Configurer le réseau, on choisit l’option "Use Network Manager (default backend)"
 
-![networkmanager](04.png)
+![networkmanager](images/04.png)
 
 
 On ignore ensuite les options Pacman et Paquets supplémentaires pour choisir le fuseau horaire. Par exemple, Europe/Paris.
 
-![fuseau horaire](05.png)
+![fuseau horaire](images/05.png)
 
 
 Maintenant, on peut aller sur installer et attendre patiemment que cette étape se termine. Une fois l’étape terminée, il faut aller dans le chroot pour deux petites commandes.
 
+![chroot](images/06.png)
 
 Il faut entrer chfn suivi du nom de l’utilisateur pour lui donner un nom complet plus parlant, dans mon cas, Tonton Fred. Étape qu’on peut sauter.
 
@@ -93,11 +94,11 @@ Une fois redémarré, on arrive sur sddm et on se connecte dans LXQt. On va ouvr
 
 On tape dans le terminal la ligne suivante pour configurer les options de compilation de notre installation : `sudo nano /etc/makepkg.conf`. On va ensuite dans la section "OPTIONS" et on va mettre un ! Devant les options debug et lto.
 
-![makepkg partie 1](07.png)
+![makepkg partie 1](images/07.png)
 
 Toujours dans ce fichier, on va dans l’option MAKEFLAGS et on saisit le nombre de CPUs utilisés, sans oublier de sortir le \# en début de ligne. On enregistre ensuite le fichier avec le raccourci clavier CTRL+X.
 
-![makepkg partie 2](08.png)
+![makepkg partie 2](images/08.png)
 
 On tape dans le terminal la ligne suivante : `git clone` [https://aur.archlinux.org/yay.git](https://aur.archlinux.org/yay.git)
 
@@ -105,7 +106,7 @@ On continue avec un `cd yay`. Puis avec un `makepkg -sri` pour installer yay.
 
 Enfin, une fois yay installé, on peut passer à l’installation d’octopi : `yay -S qt-sudo` puis `yay -S octopi`. Maintenant, on peut lancer Octopi pour installer les paquets manquants.
 
-![octopi](09.png)
+![octopi](images/09.png)
 
 Maintenant, voici la liste des paquets à installer avec Octopi :
 
@@ -138,7 +139,7 @@ Dans la nouvelle fenêtre, on va sur Lancement automatique / ajouter et on rempl
 - Nom : octopi-notifier
 - Commande : /usr/bin/octopi-notifier
 
-![applications au démarrage](10.png)
+![applications au démarrage](images/10.png)
 
 Ensuite on clique sur OK. Ensuite, après un duo déconnexion et reconnexion, l’icone d’octopi est disponible en bas à droite de l’écran.
 
@@ -163,7 +164,7 @@ Sur Google Drive : [https://drive.google.com/file/d/1ljJt8YEoyjUA\_cBtxqko1SOPY
 
 Enfin, on modifie le thème en allant dans Paramètres de LXQt / Apparence / Thème LXQt/Arch-Colors.
 
-![thème lxqt](11.png)
+![thème lxqt](images/11.png)
 
 Et voila, la FredoOS est désormais complètement reproduite. Je n’ai pas parlé des logiciels qu’on peut épingler comme Favoris, car c’est en fonction de vos goûts. Et avec seulement 3 paquets AUR par défaut, on peut être tranquille durant pas mal de temps:)
 
