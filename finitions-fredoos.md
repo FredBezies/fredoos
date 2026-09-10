@@ -16,13 +16,13 @@ Le premier paquet logiciel à rajouter, c’est le paquet linux-headers. En effe
 
 Autre outil que j’avais oublié d’installer dans le guide officiel, c’est un bloc note quand on a besoin de créer rapidement un fichier texte. J’ai donc choisi [Featherpad](https://github.com/tsujan/featherpad) que vous pourrez ajouter à votre installation.
 
-![FeatherPad en action](12.png)
+![FeatherPad en action](images/12.png)
 
 ## III) La retouche photo
 
 Pour la retouche d’image et de photo, soit Gimp, soit Krita, ce dernier étant plus adapté aux environnements de bureau basé sur QT, comme LXQt.
 
-![Krita en action](13.png)
+![Krita en action](images/13.png)
 
 ## IV) SDDM et son thème
 
@@ -44,5 +44,5 @@ Current=archlinux-soft-grey
 
 Vous pouvez remplacer archlinux-soft-grey par elarun, maya ou maldives. Et voici le résultat avec archlinux-soft-grey :
 
-![SDDM en action](14.png)
+![SDDM en action](images/14.png)
 
