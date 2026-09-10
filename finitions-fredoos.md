@@ -46,3 +46,12 @@ Vous pouvez remplacer archlinux-soft-grey par elarun, maya ou maldives. Et voici
 
 ![SDDM en action](images/14.png)
 
+## V) Complétons les outils bureautique.
+
+Il manque quelques outils bien pratique, comme une calculatrice ou un visionneur de fichiers en PDF. Ici les outils de Plasma vont être mis à contribution.
+
+- Skanlite (pour gérer les scanners)
+- Kcalc
+- Okular (pour visionner les fichiers en pdf)
+
+![Kcalc et Okular en action](images/15.png)
