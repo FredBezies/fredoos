@@ -55,3 +55,27 @@ Il manque quelques outils bien pratique, comme une calculatrice ou un visionneur
 - Okular (pour visionner les fichiers en pdf)
 
 ![Kcalc et Okular en action](images/15.png)
+
+## VI) Ajout de Zsh
+
+Pour avoir le shell zsh dans le terminal, il faut commencer par installer trois paquets, à savoir `zsh`, `zsh-completions` et `gmrl-zsh-config`. Une fois les deux paquets installés, on ouvre un terminal et on commence par changer le shell avec la commande `chsh -s /usr/bin/zsh`. On entre ensuite la commande `zsh`.
+
+On sélectionne l'option 0 pour sauvegarder le fichier de configuration de zsh. 
+
+![premier démarrage de Zsh](images/16.png)
+
+Ensuite, on modifie le fichier .zshrc pour avoir les lignes suivantes :
+
+```
+autoload -Uz compinit promptinit
+
+prompt grml
+```
+
+Il faut ensuite se déconnecter et se reconnecter pour que zsh soit le shell par défaut. Vous aurez Zsh avec l'autocomplétion et surtout un shell plus évolué que ce bon vieux Bash. 
+
+![Fastfetch avec Zsh détecté](images/17.png)
+
+Une fois qu'on a gouté à la puissance de Zsh, on s'en sépare difficilement.
+
+
