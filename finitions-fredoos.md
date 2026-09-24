@@ -78,4 +78,8 @@ Il faut ensuite se déconnecter et se reconnecter pour que zsh soit le shell par
 
 Une fois qu'on a gouté à la puissance de Zsh, on s'en sépare difficilement.
 
+## VII) Ajout d'un outil "pense-bête"
 
+En complément à FeatherPad, il existe un outil du nom de FeatherNotes qui joue le rôle de pense-bête pour LXQt. Il s'installe simplement avec un `sudo pacman -S feathernotes`.
+
+![Feathernotes en action](images/18.png)
