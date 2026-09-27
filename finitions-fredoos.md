@@ -83,3 +83,23 @@ Une fois qu'on a gouté à la puissance de Zsh, on s'en sépare difficilement.
 En complément à FeatherPad, il existe un outil du nom de FeatherNotes qui joue le rôle de pense-bête pour LXQt. Il s'installe simplement avec un `sudo pacman -S feathernotes`.
 
 ![Feathernotes en action](images/18.png)
+
+## VIII) De la virtualisation avec VirtMachineManager.
+
+Cette section est optionnelle et ne concerne que les personnes voulant virtualiser des OS via Qemu. Vous pouvez très bien utiliser [VirtualBox](https://www.virtualbox.org/) à la place pour éviter de vous prendre la tête pour mettre en place cette fonctionnalité.
+
+La première étape consiste à installer - soit via Octopi, soit via la ligne de commande les paquets `qemu-desktop` et `virt-manager`. Ensuite dans un terminal, il faut entrer les deux commandes suivantes :
+
+`sudo systemctl enable --now libvirtd.socket`
+
+Cela active le daemon nécessaire à VirtMachineManager. 
+
+Ensuite, on rajoute le group libvirt au compte utilisateur :
+
+`sudo gpasswd -a fred libvirt`
+
+En remplaçant fred par votre nom d'utilisateur. Il suffit ensuite de se déconnecter et reconnecter et on peut alors lancer VirtMachineManager et l'avoir complètement fonctionnel dès le lancement. La preuve avec la capture d'écran ci-dessous :)
+
+![VirtMachineManager en action](images/19.png)
+
+La double virtualisation est ultra-lente, mais au moins elle se lance :)
