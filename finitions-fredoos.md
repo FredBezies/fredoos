@@ -103,3 +103,27 @@ En remplaçant fred par votre nom d'utilisateur. Il suffit ensuite de se déconn
 ![VirtMachineManager en action](images/19.png)
 
 La double virtualisation est ultra-lente, mais au moins elle se lance :)
+
+## IX) Ajouter l'âge d'une installation dans Fastfetch
+
+Fastfetch est un outil puissant. Et on peut l'étendre pour afficher l'âge en jours d'une installation. Je dois déclarer ici que j'ai reçu l'aide d'une IA, et non, ce n'est pas le chat pétomane :)
+
+Il faut commencer par installer le paquet `expac` qui permet de trouver l'âge d'une installation. Ensuite, il faut générer une configuration par défaut de Fastfetch avec la commande `fastfetch --gen-config`. Appuyez sur la touche entrée pour valider les options par défaut.
+
+Ensuite, en utilisant nano, on va modifier le fichier `.config/fastfetch/config.jsonc`. On descend jusqu'à la section locale et on y insère le code suivant :
+
+```
+{
+    "type": "command",
+    "key": "Age",
+    "text": "echo $(( ($(date +%s) - $(date -d \"$(expac --timefmt='%Y-%m-%d' '%l' | sort | head -1)\" +%s)) / 86400 )) days"
+},
+```
+
+Cf la capture d'écran ci-dessous :
+
+![la configuration de fastfetch](images/20.png)
+
+Et ensuite quand on lance un fastfetch, ça donne l'âge de l'installation utilisée.
+
+![Fastfetch montrant l'âge de l'installation](images/21.png)
