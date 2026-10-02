@@ -127,3 +127,24 @@ Cf la capture d'écran ci-dessous :
 Et ensuite quand on lance un fastfetch, ça donne l'âge de l'installation utilisée.
 
 ![Fastfetch montrant l'âge de l'installation](images/21.png)
+
+## X) Avoir une écran de chargement avec Plymouth
+
+Plymouth permet d'afficher un écran de chargement lors du démarrage. Il faut se souvenir que la FredoOS utilise systemd-boot avec un noyau unifié alias UKI (Unified Kernel Image) ce qui est à prendre en compte.
+
+On commence par installer Plymouth. Ensuite, on va modifier le fichier `/etc/mkinitcpio.conf`. On descend jusqu'à la ligne HOOKS et on rajoute à la fin de la liste "Plymouth" (sans les guillemets).
+
+Ensuite on choisit le thème à appliquer. Par défaut, c'est un cercle qui tourne sur lui-même. Grand classique. Cette étape n'est pas obligatoire. Si on veut remplacer le thème, il faut modifier le fichier `/etc/plymouth/plymouthd.conf` pour avoir le contenu suivant :
+
+```
+[Daemon]
+Theme=script
+```
+
+Cela affichera le logo d'Archlinux avec une barre de chargement. Ensuite, on modifier le fichier /etc/kernel/cmdline et on rajoute à la fin de la ligne le duo "quiet splash" (sans les guillemets).
+
+On finit par un petit <code>sudo mkinitcpio -P</code> pour régénérer l'image noyau unifiée. Au prochain démarrage, vous aurez un lancement uniquement graphique.
+
+![Plymouth en action](images/22.png)
+
+C'est plus long à écrire qu'à mettre en place, comme souvent !
